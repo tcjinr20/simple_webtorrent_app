@@ -1,0 +1,109 @@
+@import '../../../node_modules/materialize-css/sass/materialize.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400');
+@import '../../../node_modules/mediaelement/build/mediaelementplayer.min.css';
+
+body{
+  background-color: #343a40;
+}
+
+.material-icons{
+  color: #4a148c;
+  cursor: pointer;
+}
+nav{
+  input{
+    color: #ffffff;
+  }
+  .preloader-wrapper{
+    position: absolute;
+    right: 1%;
+    top: 15%;
+  }
+}
+#torrent_collection.collection{
+  li.collection-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .secondary-content {
+    min-width: 35%;
+    .show-more{
+      float: right;
+      margin-left: 1%;
+    }
+    .badge{
+      color: #ffffff;
+    }
+    div.title{
+      max-width: 65%;
+    }
+  }
+  @media only screen and (max-width: 992px){
+    .badge{
+      margin-top: 5%;
+    }
+    .title{
+      white-space: normal;
+    }
+  }
+}
+.modal{
+  .secondary-content{
+    span{
+      color: #ffffff;
+    }
+    i{ float: right;}
+  }
+  a{
+    position: absolute;
+    z-index: 9999;
+    top: 1%;
+    right: 1%;
+  }
+}
+
+.bottom-sheet{
+  .preloader-wrapper{
+    margin-left: 45%;
+  }
+  .badge{
+    float: left;
+    margin-right: 1%;
+    color: #ffffff;
+  }
+}
+
+.magnet{
+  @extend .material-icons;
+  background-image: url('/images/magnet.svg');
+  width: 24px;
+  height: 24px;
+  float: right;
+  margin-left: 3%;
+}
+@media only screen and (max-width: 992px){
+  .modal {
+    width: 99%;
+    height: 100%;
+    #me_0{
+      max-height: 475px;
+    }
+  }
+}
+
+::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #4a148c;
+}
